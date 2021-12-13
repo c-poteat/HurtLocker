@@ -40,9 +40,8 @@ public class StringFixer {
     }
 
     public String formatString() {
-
-        String str = liteParser;
-
+        replaceAllCharactersAddSpace();
+        String str = replaceAllCharactersAddSpace();
         StringBuffer sb = new StringBuffer();
         Matcher m = Pattern.compile("([a-z])([a-z]*)", Pattern.CASE_INSENSITIVE).matcher(str);
         while (m.find()) {
