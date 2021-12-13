@@ -1,11 +1,6 @@
 
 import org.apache.commons.io.IOUtils;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.util.Scanner;
-
 public class Main {
 
     public String readRawDataToString() throws Exception {
@@ -17,8 +12,11 @@ public class Main {
     public static void main(String[] args) throws Exception {
 //        String output = (new Main()).readRawDataToString();
 //        System.out.println(output);
-        Parser parser = new Parser();
-        parser.removeWeirdCharacters();
+        StringFixer stringFixer = new StringFixer();
+        System.out.println(stringFixer.replaceAllCharactersAddSpace());
+        System.out.println(stringFixer.formatString());
+
+
     }
 
 }
