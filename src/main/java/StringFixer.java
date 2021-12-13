@@ -1,9 +1,5 @@
-import javafx.scene.shape.Path;
-
 import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.nio.file.Files;
 import java.util.Scanner;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -40,7 +36,6 @@ public class StringFixer {
     }
 
     public String formatString() {
-        replaceAllCharactersAddSpace();
         String str = replaceAllCharactersAddSpace();
         StringBuffer sb = new StringBuffer();
         Matcher m = Pattern.compile("([a-z])([a-z]*)", Pattern.CASE_INSENSITIVE).matcher(str);

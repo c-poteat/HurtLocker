@@ -1,9 +1,8 @@
 
-import java.io.FileWriter;   // Import the FileWriter class
+import java.io.FileWriter;
 import java.io.IOException;
 import org.apache.commons.io.IOUtils;
 
-import java.io.IOException;
 
 public class Main {
 
@@ -14,13 +13,11 @@ public class Main {
     }
 
     public static void main(String[] args) throws Exception {
-//        String output = (new Main()).readRawDataToString();
-//
+
         StringFixer stringFixer = new StringFixer();
-//        stringFixer.replaceAllCharactersAddSpace();
-//        stringFixer.formatString();
         try {
             FileWriter myWriter = new FileWriter("Output.txt");
+
             myWriter.write(stringFixer.formatString());
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
@@ -28,7 +25,7 @@ public class Main {
 
     }
 
-
     }
 
 }
+
