@@ -45,5 +45,14 @@ public class StringFixer {
         return(m.appendTail(sb).toString());
     }
 
+    public String formatSplitter() {
+        String strMain = formatString();
+        String[] arrSplit_3 = strMain.split("\\s");
+        for (int i = 0; i < arrSplit_3.length; i++) {
+            System.out.println(arrSplit_3[i]);
+        }
+        return strMain;
+    }
+
 }
 

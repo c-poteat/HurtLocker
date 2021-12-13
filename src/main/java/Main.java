@@ -13,12 +13,10 @@ public class Main {
     }
 
     public static void main(String[] args) throws Exception {
-
-        StringFixer stringFixer = new StringFixer();
+         StringFixer stringFixer = new StringFixer();
         try {
             FileWriter myWriter = new FileWriter("Output.txt");
-
-            myWriter.write(stringFixer.formatString());
+            myWriter.write(stringFixer.formatSplitter());
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {
