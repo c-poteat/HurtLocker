@@ -16,7 +16,7 @@ public class Main {
          StringFixer stringFixer = new StringFixer();
         try {
             FileWriter myWriter = new FileWriter("Output.txt");
-            myWriter.write(stringFixer.formatSplitter());
+            myWriter.write(stringFixer.formatName());
             myWriter.close();
             System.out.println("Successfully wrote to the file.");
         } catch (IOException e) {

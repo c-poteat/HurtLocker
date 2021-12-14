@@ -32,7 +32,7 @@ public class StringFixer {
         String replace = " ";
         Pattern newPattern = Pattern.compile("[#;:^@%*!]", Pattern.CASE_INSENSITIVE);
         Matcher matcher = newPattern.matcher(liteParser);
-        return matcher.replaceAll(replace);
+        return matcher.replaceAll(replace).replaceAll("\\s+ "," ").trim();
     }
 
     public String formatString() {
@@ -45,13 +45,26 @@ public class StringFixer {
         return(m.appendTail(sb).toString());
     }
 
-    public String formatSplitter() {
-        String strMain = formatString();
-        String[] arrSplit_3 = strMain.split("\\s");
-        for (int i = 0; i < arrSplit_3.length; i++) {
-            System.out.println(arrSplit_3[i]);
-        }
-        return strMain;
+    public String formatCookies() {
+        // Set String to replace
+        String replace = "Cookies";
+        // Find value to replace with
+        Pattern newPattern = Pattern.compile("Co0Kies", Pattern.CASE_INSENSITIVE);
+        // Look up data according to hamlet file
+        Matcher matcher = newPattern.matcher(formatString());
+
+        return matcher.replaceAll(replace);
+    }
+
+    public String formatName() {
+        // Set String to replace
+        String replace = "\n Name";
+        // Find value to replace with
+        Pattern newPattern = Pattern.compile("Name", Pattern.CASE_INSENSITIVE);
+        // Look up data according to hamlet file
+        Matcher matcher = newPattern.matcher(formatCookies());
+
+        return matcher.replaceAll(replace);
     }
 
 }

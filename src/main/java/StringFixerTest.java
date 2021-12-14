@@ -8,10 +8,10 @@ public class StringFixerTest {
 
     @Test
     public void matcherTest() {
-        String strMain = stringFixer.formatString();
-        String[] arrSplit_3 = strMain.split("\\s");
-        for (int i = 0; i < arrSplit_3.length; i++) {
-            System.out.println(arrSplit_3[i]);
+        String x = "This is a new line=?xxx";
+        Pattern ptrn = Pattern.compile("^(\\\\S+)$", Pattern.MULTILINE);
+        Matcher matcher = ptrn.matcher(x);
+            System.out.println(matcher);
         }
-    }
-}
+        }
+
